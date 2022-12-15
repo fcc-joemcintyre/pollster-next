@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "@cygns",
+    "next/core-web-vitals"
+  ],
+  "rules": {
+    "import/extensions": "off",
+    "react/jsx-filename-extension": "off",
+    "react/require-default-props": "off"
+  }
+}
