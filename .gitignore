@@ -1,0 +1,10 @@
+.DS_Store
+*.log
+next-env.d.ts
+
+node_modules/
+.vscode/
+.next/
+out/
+build/
+coverage/
