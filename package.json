@@ -6,7 +6,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "lint": "next lint",
+    "lint": "eslint --no-error-on-unmatched-pattern --ext .js,.ts,.tsx app",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
