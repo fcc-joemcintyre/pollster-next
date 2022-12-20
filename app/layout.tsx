@@ -1,7 +1,8 @@
+import { ReactNode } from 'react';
 import './globals.css';
 
 type Props = {
-  children: React.ReactNode,
+  children: ReactNode,
 };
 
 export default function RootLayout (
