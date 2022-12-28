@@ -1,3 +1,4 @@
+import NextLink from 'next/link';
 import { getPolls } from '../data/data';
 
 export default async function HomePage () {
@@ -9,12 +10,16 @@ export default async function HomePage () {
         <h1 className='my-4'>Open Polls</h1>
         <ul className='space-y-2'>
           {polls.map ((a) => (
-            <li key={a.key}>
-              <div>{a.title}</div>
-              <div className='text-sm'>
-                {`${a.choices.reduce ((acc, b) => acc + b.votes, 0)} votes`}
-              </div>
-            </li>
+            <div key={a.key}>
+              <NextLink href={`/poll/${a.key}`}>
+                <li>
+                  <div>{a.title}</div>
+                  <div className='text-sm'>
+                    {`${a.choices.reduce ((acc, b) => acc + b.votes, 0)} votes`}
+                  </div>
+                </li>
+              </NextLink>
+            </div>
           ))}
         </ul>
       </div>

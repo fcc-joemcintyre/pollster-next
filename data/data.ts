@@ -25,3 +25,7 @@ const polls: Poll[] = [
 export function getPolls () {
   return polls;
 }
+
+export function getPoll (key) {
+  return polls.find ((a) => a.key === key);
+}
