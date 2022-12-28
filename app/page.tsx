@@ -6,9 +6,17 @@ export default async function HomePage () {
   return (
     <>
       <div className='max-w-screen-lg mx-auto p-2'>
-        {polls.map ((a) => (
-          <p key={a.key}>{a.title}</p>
-        ))}
+        <h1 className='my-4'>Open Polls</h1>
+        <ul className='space-y-2'>
+          {polls.map ((a) => (
+            <li key={a.key}>
+              <div>{a.title}</div>
+              <div className='text-sm'>
+                {`${a.choices.reduce ((acc, b) => acc + b.votes, 0)} votes`}
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );
